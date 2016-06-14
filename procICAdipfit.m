@@ -60,7 +60,7 @@ disp(['Epoched from ' num2str(p.epMin) ' to ' num2str(p.epMax)...
 fprintf(logFile, ['%.2f - Epoched from ' num2str(p.epMin) ' to ' num2str(p.epMax)...
     ', no baseline correction \n \n \n'], toc);
 
-% Remove mastoids to compensate for robust reference data rank deficiency
+% Remove mastoids to reduce rank
 EEG = pop_select(EEG, 'nochannel', {'M1', 'M2'});
 chanlocs = EEG.chanlocs;
 fprintf(logFile, '%.2f - Removed mastoids to reduce rank \n', toc);
