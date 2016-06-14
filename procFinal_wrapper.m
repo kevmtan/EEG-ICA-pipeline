@@ -37,8 +37,8 @@ p.exCh = 129:136; % all external channels
 p.EOGch = 131:135; % EOG channels
 
 % Epoch params
-p.epMin = -.5; % Epoch start for ICA dataset (long as possible w/o overlap)
-p.epMax = 1.25; % Epoch end for final & ICA dataset
+p.epMin = -.5; % Epoch start (seconds before event/trigger)
+p.epMax = 1.25; % Epoch end (seconds after event/trigger)
 p.epEvents = num2cell(1:200); % Event types (triggers) to epoch to
 p.bMin = -200; % baseline correction start time (ms)
 

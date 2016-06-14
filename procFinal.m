@@ -61,7 +61,7 @@ EEG.etc = rmfield(EEG.etc, 'noiseDetection');
 disp('Removed large EEG.etc.noiseDetection field from PREP pipeline');
 fprintf(logFile, '%.2f - removed large EEG.etc.noiseDetection field from PREP pipeline \n', toc);
 
-% Remove mastoids to compensate for robust reference data rank deficiency
+% Remove mastoids to reduce rank and align with ICA processing
 EEG = pop_select(EEG, 'nochannel', {'M1', 'M2'});
 chanlocs = EEG.chanlocs;
 disp('Removed mastoids to reduce rank');
@@ -72,7 +72,7 @@ fprintf(logFile, '%.2f - Removed mastoids to reduce rank \n', toc);
 [ECGch, ~] = eeg_decodechan(EEG.chanlocs, 'ECG'); %#ok<ASGLU>
 EEG.etc.preproc.exCh_ChRm = exChNames;
 
-% High pass filter 1hz FIR1
+% High pass filter FIR1
 EEG = pop_eegfiltnew(EEG, p.HP.freq, 0);
 EEG.setname = [EEG.setname '_' p.HP.name];
 fprintf(logFile, ['%.2f - Hi-passed ' p.HP.name ' FIR1 zero-order \n'], toc);
