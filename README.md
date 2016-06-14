@@ -1,5 +1,7 @@
-# EEGpipeline
+# Kevin Tan's EEGLAB Pipeline
 
-A detailed guide for using this code can be found here: https://github.com/kevmtan/EEGpipeline/wiki
+Kevin Tan's EEGLAB pipeline performs ICA-based EEG preprocessing and source localization
 
-Read the above before using the code. 
+A detailed practical, algorithmic and theoretical overview of this pipeline can be found here: https://github.com/kevmtan/EEGpipeline/wiki
+
+Read the above wiki before using this pipeline
