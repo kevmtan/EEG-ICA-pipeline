@@ -1,4 +1,4 @@
-# Kevin Tan's EEGLAB Pipeline
+# [Kevin Tan's EEGLAB Pipeline](https://github.com/kevmtan/EEGpipeline/wiki)
 
 Kevin Tan's EEGLAB pipeline performs ICA-based EEG preprocessing and source localization
 
